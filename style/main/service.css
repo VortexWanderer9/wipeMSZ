@@ -1,0 +1,68 @@
+.service-container{
+    height: auto;
+    margin-top: 40px ;
+    background-color: aliceblue;
+}
+
+.service-grid{
+   display: grid;
+   gap: 20px;
+   padding: 10px;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.service-item{
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: .5s ease-in-out;
+      padding: 0% 0% 20px 0%;
+      border-radius: 10px;
+}
+.service-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+.service-text {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.service-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.service-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.service-item:hover{
+    box-shadow: 0 4px 10px rgb(0, 0, 0,0.8);
+    transform: translateY(-5px);
+}
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.learn-more-btn, .price {
+    padding: 10px 20px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #007bff;
+    font-size: 16px;
+}
+.learn-more-btn:hover, .price:hover {
+    background-color: #0056b3;
+}

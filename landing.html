@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lending page</title>
+    <link rel="stylesheet" href="style/main/landing.css">
+    <link rel="stylesheet" href="style/main/service.css">
+</head>
+<body>
+    <section id="nav-bar">
+        <div class="nav-container">
+            <ul class="nav-links">
+               <li><a href="home">Home</a></li>
+               <li><a href="contract">Contract us</a></li>
+               <li><a href="About me">About us</a></li>
+               <li><a href="">Donate us</a></li>
+            </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="landing">
+        <div class="landing-page-container">
+            <div class="landing-content">
+                <div class="image-sec">
+                    <img src="images/lending-page-elliot.png" width="600">
+                </div>
+              <div class="text-content">
+                    <div class="for-animation">
+                        <p class="text-ani" id="typing-text"></p>
+                    </div>
+                    <p class="description">
+                        Welcome to WiperZero, your ultimate destination for cybersecurity expertise. Whether you're looking to enhance your digital security or explore the world of ethical hacking, you've come to the right place. Join us on this journey to safeguard your online presence and learn from the best in the field.
+                    </p>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="Explore-section">
+                <h1>See More</h1>
+                          <p class="down-arrow">
+  <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+       fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+       stroke="currentColor" class="arrow-svg">
+    <path stroke-linecap="round" stroke-linejoin="round"
+          d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+  </svg>
+</p>
+
+
+
+            </div>
+
+    <section id="my-services">
+        <div class="service-container">
+            <div class="service-grid">
+                <div class="service-item">
+                    <img src="images/Web-Security.webp" width="500" alt="">
+                  <div class="service-text">
+                      <h2>Web Security</h2>
+                    <p>we protect your web applications from vulnerabilities and attacks. 
+                        Our team specializes in securing websites against threats like SQL injection, XSS, and more.</p>
+                    </p>
+                  </div>
+                  <div class="button-container">
+                        <button class="learn-more-btn">Learn More</button>
+                        <button class="price">Price</button>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <img src="images/Network-Security.avif" width="500" alt="">
+                    <div class="service-text">
+                        <h2>Network Security</h2>
+                        <p>Secure your network infrastructure against threats.
+                        Our experts implement robust security measures to protect your data and systems from unauthorized access.</p>
+                    </div>
+                    <div class="button-container">
+                        <button class="learn-more-btn">Learn More</button>
+                        <button class="price">Price</button>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <img src="images/Penetration-Testing.jpg" width="500" alt="">
+                    <div class="service-text">
+                        <h2>Penetration Testing</h2>
+                        <p>Identify and fix security weaknesses in your systems.
+                        Our penetration testing services simulate real-world attacks to help you strengthen your defenses.</p>
+                        </p>
+                    </div>
+                    <div class="button-container">
+                        <button class="learn-more-btn">Learn More</button>
+                        <button class="price">Price</button>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <img src="images/Cybersecurity-Training.jpg" width="500" alt="">
+                    <div class="service-text">
+                        <h2>Cybersecurity</h2>
+                        <p>Learn the latest techniques in cybersecurity and ethical hacking.
+                        Our training programs equip you with the skills needed to protect against cyber threats.</p>
+                    </div>
+                    <div class="button-container">
+                        <button class="learn-more-btn">Learn More</button>
+                        <button class="price">Price</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+      
+    </section>
+
+
+
+
+
+    <script>
+const phrases = ["I'm Elliot.", "cybersecurity expert.", "love Hacking.", "Welcome here!", "secure your digital world.", "Join us now!","Be safe online.", "Ask for help."];
+const el = document.getElementById("typing-text");
+
+let phraseIndex = 0;
+let letterIndex = 0;
+let currentPhrase = '';
+let isDeleting = false;
+
+function typeLoop() {
+    currentPhrase = phrases[phraseIndex];
+
+    if (isDeleting) {
+        el.textContent = currentPhrase.substring(0, letterIndex--);
+    } else {
+        el.textContent = currentPhrase.substring(0, letterIndex++);
+    }
+
+    let delay = isDeleting ? 80 : 150;
+
+    if (!isDeleting && letterIndex === currentPhrase.length) {
+        delay = 1000; // pause before deleting
+        isDeleting = true;
+    } else if (isDeleting && letterIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        delay = 500;
+    }
+
+    setTimeout(typeLoop, delay);
+}
+
+typeLoop();
+</script>
+
+</body>
+</html>
