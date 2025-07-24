@@ -1,6 +1,5 @@
 .service-container{
     height: auto;
-    margin-top: 40px ;
     background-color: aliceblue;
 }
 
@@ -8,13 +7,14 @@
    display: grid;
    gap: 20px;
    padding: 10px;
-   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .service-item{
     width: 100%;
     max-width: 500px;
-    margin: auto;
+    margin-top: 30px;
+     background-color: #f0f0f0;
     overflow: hidden;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       transition: .5s ease-in-out;
@@ -23,14 +23,19 @@
 }
 .service-item img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
 }
 
 
+
 .service-text {
   padding: 20px;
-  background-color: #f9f9f9;
+
+  margin-top: 30px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
 }
 .service-text h2 {
   font-size: 24px;
@@ -40,6 +45,7 @@
   font-size: 16px;
   color: #555;
   line-height: 1.5;
+  margin-top: 20px;
 }
 
 .service-item:hover{
@@ -50,8 +56,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
-    gap: 10px;
+    margin-top: 30px;
+    gap: 15px;
+  
 }
 
 .learn-more-btn, .price {
@@ -65,4 +72,6 @@
 }
 .learn-more-btn:hover, .price:hover {
     background-color: #0056b3;
+    color: #fff;
+  
 }
