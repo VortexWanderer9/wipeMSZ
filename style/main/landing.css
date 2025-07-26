@@ -64,11 +64,8 @@ body{
     filter: drop-shadow(0 0 10px rgba(0, 255, 8, 0.5));
 }
 
-.landing-page-container{
-
-}
-
 .landing-content{
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
