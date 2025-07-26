@@ -1,0 +1,121 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #000;
+  color: #00ff88;
+  font-family: 'Share Tech Mono', monospace;
+  overflow-x: hidden;
+}
+
+/* Matrix background */
+.matrix {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: -1;
+}
+.matrix::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(transparent, rgba(0,255,0,0.05) 2px);
+  animation: matrixScroll 2s linear infinite;
+}
+@keyframes matrixScroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(20px); }
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 40px 20px;
+}
+.glitch {
+  font-size: 2.2rem;
+  color: #0f0;
+  position: relative;
+  text-shadow: 0 0 10px #0f0;
+  animation: glitchAnim 1.5s infinite;
+}
+@keyframes glitchAnim {
+  0% { text-shadow: 2px 0 red, -2px 0 cyan; }
+  50% { text-shadow: -2px 0 cyan, 2px 0 red; }
+  100% { text-shadow: 2px 0 red, -2px 0 cyan; }
+}
+.subtitle {
+  color: #00ffaa;
+  margin-top: 10px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Projects */
+.projects {
+  padding: 30px;
+}
+.projects h2, .feedback h2 {
+  color: #00ffaa;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00ffaa;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.project-card {
+  background: rgba(0,0,0,0.8);
+  border: 1px solid #00ff88;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0,255,136,0.3);
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00ffaa;
+}
+
+/* Feedback */
+.feedback {
+  padding: 30px;
+}
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+.feedback-card {
+  background: rgba(0,0,0,0.85);
+  border: 1px solid #00ffaa;
+  padding: 20px;
+  border-radius: 6px;
+  color: #0f0;
+  box-shadow: 0 0 15px rgba(0,255,136,0.3);
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+.feedback-card:hover {
+  box-shadow: 0 0 25px #00ffaa;
+  transform: translateY(-5px);
+}
+.feedback-card span {
+  display: block;
+  margin-top: 10px;
+  color: #00ffaa;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #00ff88;
+  font-size: 0.8rem;
+  margin-top: 30px;
+}

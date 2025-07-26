@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate to Elliot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/links/donate.css">
+</head>
+<body>
+  <div class="matrix-bg"></div>
+
+  <!-- Boot Terminal -->
+  <div class="boot-screen" id="boot">
+    <pre class="boot-text" id="boot-text"></pre>
+  </div>
+
+  <!-- Main Donate Content -->
+  <div class="donate-container" id="donate-content">
+    <h1 class="title">[ Support Elliot's Mission ]</h1>
+    <p class="subtitle">Your donation keeps the servers running and the firewalls strong.</p>
+
+    <div class="donate-grid">
+      <!-- PayPal -->
+      <div class="donate-card">
+        <h2>PayPal</h2>
+        <p>Donate securely via PayPal to support cybersecurity projects.</p>
+        <button onclick="alert('Redirect to PayPal')">Donate via PayPal</button>
+      </div>
+
+      <!-- Crypto -->
+      <div class="donate-card">
+        <h2>Crypto</h2>
+        <p>Support anonymously with Bitcoin, Ethereum, or Monero.</p>
+        <div class="crypto-address">
+          <p>BTC: 1ElliotXyz...abc</p>
+          <p>ETH: 0xElliotCrypto...123</p>
+        </div>
+        <button onclick="alert('Copied Address!')">Copy Address</button>
+      </div>
+
+      <!-- Card -->
+      <div class="donate-card">
+        <h2>Credit/Debit</h2>
+        <p>Donate using Visa, Mastercard, or American Express.</p>
+        <button onclick="alert('Redirect to Payment Gateway')">Donate Now</button>
+      </div>
+    </div>
+
+    <p class="note">* Every donation is encrypted and used to strengthen digital security worldwide.</p>
+  </div>
+
+  <script src="script/donate/donate.js"></script>
+</body>
+</html>

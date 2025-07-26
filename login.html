@@ -1,88 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login page</title>
-   <link rel="stylesheet" href="style/loading.css">
-   <link rel="stylesheet" href="style/login.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WiperZero - Secure Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/login.css">
 </head>
 <body>
-<div class="main-section" style="display: none;">
-   <div class="container-for-main">
-    <section id="content">
-    <div class="image">
-      <img src="images/login-page-image/login-page.png" width="500" alt="">
+  <div class="matrix"></div>
+
+  <div class="login-terminal">
+    <h1 class="terminal-title" id="title">Initializing Secure Access...</h1>
+
+    <form id="loginForm" class="terminal-form">
+      <label>Username:</label>
+      <input type="text" id="username" autocomplete="off" required>
+      <span class="error" id="usernameError"></span>
+
+      <label>Password:</label>
+      <input type="password" id="password" required>
+      <span class="error" id="passwordError"></span>
+
+      <button type="submit" class="login-btn">ACCESS</button>
+      <p class="terminal-msg" id="loginMsg"></p>
+    </form>
+
+    <div class="terminal-footer">
+      <p>[ WiperZero v1.0 | Secure Node Access ]</p>
     </div>
-   </section>
- <section id="login-section">
-        <div class="login-container">
-            <h2>WiperZero</h2>
-            <div class="all-content">
-              <form action="/login" method="POST"> 
-              <div class="form-group">
-                <label for="username">username</label>
-                <input type="text" id="username" name="username" required>
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-              </div>
-              <div class="checkbox">
-                <label for="remember-me">
-                  <input type="checkbox" id="remember-me" name="remember-me"> Remember Me
-                </label>
-              </div>
-              <button class="login-button js-login-button" type="submit"><span>Login</span></button>
-              <div class="forgot-password">
-                <a href="/forgot-password">Forgot Password?</a>
-              </div>
-              <div class="login-through">
-                <p>login with</p>
-                <div class="social-icons">
-                  <a href="/login/google"  social_icon="google" class="google"><img src="images/svg-icons/google.svg" width="50" alt=""></a>
-                  <a href="/login/github" social_icon="GitHub" class="github"><img src="images/svg-icons/github.svg" width="50" alt=""></a>
-                  <a href="/login/twitter" social_icon="X" class="twitter"><img src="images/svg-icons/X.svg" width="50" alt=""></a>
-                </div>
-              </div>
+  </div>
 
-              <div class="register-link">
-                <p>Don't have an account? <a href="/register">Register here</a></p>
-              </div>
-            </form>
-            </div>
-          </div>
-    </section>
-   </div>
-</div>
- 
-   
-    <!-- this below code only for loading page animation -->
-      <section class="wrapper">
-      <div class="loader">
-        <div class="loading one"></div>
-        <div class="loading two"></div>
-        <div class="loading three"></div>
-        <div class="loading four"></div>
-      </div>
-    </section>
-
-    <script>
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    const wrapper = document.querySelector('.wrapper');
-    const loginContainer = document.querySelector('.main-section');
-
-    // Optional fade out/in
-    wrapper.classList.add('fade-out');
-    setTimeout(() => {
-      wrapper.style.display = 'none';
-      loginContainer.style.display = 'block';
-      loginContainer.classList.add('fade-in');
-    }, 100); 
-  }, 1000); 
-});
-    </script>
-    <script src="script/login/forFunction.js"></script>
+  <script src="script/login.js"></script>
 </body>
 </html>

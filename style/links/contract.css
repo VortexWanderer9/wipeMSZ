@@ -1,0 +1,104 @@
+* {margin:0; padding:0; box-sizing:border-box;}
+
+body {
+  font-family: 'Share Tech Mono', monospace;
+  background: #0a0a0a;
+  color: #00ffe0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  overflow:hidden;
+}
+
+/* Terminal Container */
+.contact-container {
+  width:100%;
+  max-width:600px;
+  padding:20px;
+}
+.terminal {
+  background: rgba(0,0,0,0.8);
+  border: 1px solid #00ffe0;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(0,255,224,0.2);
+  animation: flicker 2s infinite alternate;
+}
+@keyframes flicker {
+  0% { box-shadow: 0 0 10px rgba(0,255,224,0.2);}
+  100% { box-shadow: 0 0 25px rgba(0,255,224,0.6);}
+}
+
+/* Titles */
+.title {
+  font-size: 1.4rem;
+  color:#00ffe0;
+  text-align:center;
+  margin-bottom: 10px;
+  text-shadow:0 0 10px #00ffe0;
+}
+.subtitle {
+  color:#00ff88;
+  font-size: 0.9rem;
+  text-align:center;
+  margin-bottom:20px;
+}
+
+/* Form */
+.contact-form {
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+label {
+  font-size:0.9rem;
+  color:#fff;
+}
+input, textarea {
+  background: transparent;
+  border: 1px solid #00ffe0;
+  border-radius:6px;
+  padding:10px;
+  color:#fff;
+  font-family:inherit;
+  transition:0.3s;
+}
+input:focus, textarea:focus {
+  outline:none;
+  box-shadow:0 0 15px #00ffe0;
+  border-color:#00ff88;
+}
+textarea {
+  min-height:100px;
+  resize:none;
+}
+
+/* Button */
+button {
+  background:#00ffe0;
+  border:none;
+  border-radius:6px;
+  padding:10px;
+  font-weight:bold;
+  color:#000;
+  cursor:pointer;
+  transition:0.3s;
+}
+button:hover {
+  background:#00bbaa;
+  color:#fff;
+  box-shadow:0 0 15px #00ffe0;
+}
+
+/* Info */
+.contact-info {
+  margin-top:20px;
+  font-size:0.8rem;
+  color:#999;
+  text-align:center;
+}
+.note {
+  margin:5px 0;
+  color:#00ff88;
+}

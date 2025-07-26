@@ -1,0 +1,116 @@
+
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      background: #000;
+      color: #00ffea;
+      overflow-x: hidden;
+    }
+
+    /* Matrix Canvas */
+    #matrix-canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      background: #000;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px;
+    }
+
+    h1.glitch {
+      font-size: 3rem;
+      text-align: center;
+      color: #00ffea;
+      animation: glitch 1s infinite alternate;
+    }
+    @keyframes glitch {
+      0% {text-shadow: 2px 0 #ff0055, -2px 0 #00ffea;}
+      50% {text-shadow: -2px 0 #00ffea, 2px 0 #ff0055;}
+      100% {text-shadow: 2px 2px #ff0055, -2px -2px #00ffea;}
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+    .profile img {
+      width: 200px;
+      border-radius: 50%;
+      border: 3px solid #00ffea;
+      box-shadow: 0 0 30px #00ffea;
+      margin-bottom: 20px;
+    }
+    .bio {
+      text-align: center;
+      max-width: 800px;
+      margin-top: 10px;
+    }
+
+    /* Sections */
+    .section {
+      margin-top: 60px;
+    }
+    .section h2 {
+      font-size: 2rem;
+      border-left: 5px solid #ff0055;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      flex: 1 1 300px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(0,255,234,0.3);
+      padding: 20px;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s;
+    }
+    .card:hover {transform: scale(1.05);}
+    .card h3 {color: #ff0055; margin-bottom: 10px;}
+    .card p {color: #ccc; font-size: 0.95rem; line-height: 1.5;}
+
+    /* Terminal */
+    .terminal {
+      background: #0d0d0d;
+      border: 2px solid #00ffea;
+      padding: 20px;
+      margin-top: 50px;
+      color: #00ff00;
+      font-family: 'Share Tech Mono', monospace;
+      height: 250px;
+      overflow-y: auto;
+    }
+    .terminal::before {
+      content: 'root@fsociety:~$';
+      color: #ff0055;
+      margin-right: 10px;
+    }
+
+    /* Fake Hacked Overlay */
+    #hacked-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #000;
+      color: #00ff00;
+      font-family: 'Share Tech Mono', monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      z-index: 9999;
+      display: none;
+    }

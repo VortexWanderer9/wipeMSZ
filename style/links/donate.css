@@ -1,0 +1,104 @@
+* {margin:0; padding:0; box-sizing:border-box;}
+body {
+  font-family: 'Share Tech Mono', monospace;
+  background: #000;
+  color: #00ffe0;
+  overflow:hidden;
+}
+
+/* Matrix Animated Background */
+.matrix-bg {
+  position:fixed;
+  width:100%; height:100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,255,0,0.05) 0px,
+    rgba(0,255,0,0.05) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  animation: matrix-move 1s linear infinite;
+  z-index:-1;
+}
+@keyframes matrix-move {
+  0% {background-position:0 0;}
+  100% {background-position:0 100%;}
+}
+
+/* Boot Screen */
+.boot-screen {
+  position:fixed;
+  top:0; left:0; width:100%; height:100%;
+  background:#000;
+  color:#00ff88;
+  padding:20px;
+  font-size:14px;
+  overflow:auto;
+}
+.boot-text {white-space:pre-wrap; line-height:1.5;}
+
+/* Donate Container */
+.donate-container {
+  display:none;
+  text-align:center;
+  padding:60px 20px;
+  animation:fadeIn 1.5s ease forwards;
+}
+.title {
+  color:#00ffe0;
+  text-shadow:0 0 10px #00ffe0;
+  margin-bottom:10px;
+}
+.subtitle {
+  color:#00ff88;
+  margin-bottom:40px;
+}
+
+/* Grid */
+.donate-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  max-width:1000px;
+  margin:0 auto;
+}
+
+/* Cards */
+.donate-card {
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(0,255,224,0.3);
+  backdrop-filter:blur(10px);
+  border-radius:15px;
+  padding:25px;
+  box-shadow:0 0 25px rgba(0,255,224,0.2);
+  transition:.3s;
+  opacity:0; transform:translateY(40px);
+}
+.donate-card h2 {color:#00ffe0; margin-bottom:10px;}
+.donate-card p {color:#ccc; font-size:.9rem; margin-bottom:15px;}
+.crypto-address {font-size:.8rem; color:#00ff88; margin-bottom:10px;}
+.donate-card button {
+  background:#00ffe0;
+  color:#000;
+  font-weight:bold;
+  border:none;
+  border-radius:6px;
+  padding:8px 15px;
+  cursor:pointer;
+  transition:.3s;
+}
+.donate-card:hover {
+  transform:translateY(-10px);
+  box-shadow:0 0 40px rgba(0,255,224,0.5);
+}
+.donate-card button:hover {
+  background:#00bbaa;
+  color:#fff;
+  box-shadow:0 0 15px #00ffe0;
+}
+
+.note {margin-top:30px; color:#00ff88; font-size:.8rem;}
+
+@keyframes fadeIn {
+  to {opacity:1;}
+}
