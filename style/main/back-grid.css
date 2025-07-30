@@ -1,0 +1,21 @@
+.grid-background{
+    background: fixed;
+    inset: 0;
+    background: 
+   linear-gradient(rgba(112, 165, 186, 0.1),transparent 1px),
+   linear-gradient(90deg, rgba(112, 165, 186, 0.2), transparent 1px);
+    background-size: 100px 100px;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.7))
+            drop-shadow(0 0 16px rgba(0, 255, 255, 0.9));
+            z-index: 0;
+
+
+}
+
+.grid-background::before{
+    content: "";
+    position: absolute;
+     background: radial-gradient(circle at top left, rgba(0, 255, 255, 0.12), transparent);
+     pointer-events: none;
+     inset: 0;
+}
